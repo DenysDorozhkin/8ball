@@ -204,7 +204,7 @@ body {
 .main-screen__content_more {
   position: relative;
   width: 500px;
-  margin-top: -20px;
+  margin-top: -30px;
 }
 
 @media (max-width: 1270px) {
