@@ -204,17 +204,12 @@ body {
 .main-screen__content_more {
   position: relative;
   width: 500px;
+  margin-top: -20px;
 }
 
 @media (max-width: 1270px) {
   .main-screen__content_more {
     width: calc(300px + 200 * ((100vw - 320px) / 950));
-  }
-}
-
-@media (min-width: 554px) {
-  .main-screen__content_more {
-    margin-top: -20px;
   }
 }
 
