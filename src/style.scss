@@ -36,6 +36,7 @@ body{
     min-height: 100%;
     overflow: hidden;
 }
+
 .page{
     position: absolute;
     width: 100%;
@@ -45,6 +46,12 @@ body{
     @include flexbox();
     //flex-direction: column;
     overflow: hidden;
+
+    user-select: none;
+    -moz-user-select: none; /* Mozilla Firefox */
+    -ms-user-select: none; /* Internet Explorer (не поддерживается) */
+    -o-user-select: none; /* Opera Presto (не поддерживается) */
+    -webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
 }
 .main-screen{
     flex: 1 0 100%;
@@ -90,13 +97,12 @@ body{
             text-align: left;
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
+            @include anim(1s,0s);
         }
         &_more{
             position: relative;
             @include adaptiv-value("width", 500, 300, 1);
-            @media(min-width: 554px){
-                margin-top: -20px;
-            }
+            margin-top: -30px;
         }
         &_ball{
             //border: 2px solid #000;
@@ -105,6 +111,7 @@ body{
             height: 300px;
             z-index: 10;
             background-color: rgba(0, 0, 0, 0.668);
+            position: relative;
             @include anim(1s,0s);
             @media(max-width:385px){
                 width: 200px;
@@ -113,27 +120,33 @@ body{
         }
     }
 }
+
+canvas { position:absolute; top:0; left:0; z-index:0; width: 100%; height: 100%; opacity: 0.54; border-radius: 50%;}
+
 .ball{
     @include flexbox();
     justify-content: center;
     align-items: center;
     padding: 25px;
+    z-index: 10;
     cursor: pointer;
     &__text{
         font-family: $fontFamily;
         @include adaptiv-value("font-size", 40, 20, 1);
         color: rgb(255, 255, 255);
         text-align: center;
+        @include anim(2s,0s);
+        z-index: 10;
     }
 }
 .more{
     @include adaptiv-value("font-size", 28, 20, 1);
     color: #fff;
     z-index: 10;
-    padding: 20px;
+    padding: 15px;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    @include anim(2s,0s);
+    @include anim(1s,0s);
     position: absolute;
     top: 0;
     left: 0;
@@ -157,12 +170,13 @@ body{
     -webkit-perspective: 1000px;
     perspective: 1000px;
     display: none;
+    z-index: 10;
 
     .circle,
     .line{
         width: 300px;
         height: 300px;
-        border: 5px solid #000;
+        border: 5.4px solid rgba(255, 255, 255, 0.405);
         border-radius: 50%;
         @media(max-width:385px){
             width: 200px;
@@ -203,4 +217,12 @@ body{
 ._ball-none{
     //border: 0;
     background: none;
+}
+._ballText-none{
+    visibility: hidden;
+    opacity: 0;
+}
+._hi-none{
+    visibility: hidden;
+    opacity: 0;
 }

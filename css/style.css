@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap");
 * {
   padding: 0;
@@ -110,6 +111,15 @@ body {
   display: flex;
   font-size: 0;
   overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  /* Mozilla Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer (не поддерживается) */
+  -o-user-select: none;
+  /* Opera Presto (не поддерживается) */
+  -webkit-user-select: none;
+  /* Google Chrome, Opera Next, Safari */
 }
 
 .main-screen {
@@ -193,6 +203,8 @@ body {
   text-align: left;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 @media (max-width: 1270px) {
@@ -219,6 +231,7 @@ body {
   height: 300px;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.668);
+  position: relative;
   -webkit-transition: all 1s ease 0s;
   transition: all 1s ease 0s;
 }
@@ -228,6 +241,17 @@ body {
     width: 200px;
     height: 200px;
   }
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.54;
+  border-radius: 50%;
 }
 
 .ball {
@@ -242,6 +266,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 25px;
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -250,6 +275,9 @@ body {
   font-size: 40px;
   color: white;
   text-align: center;
+  -webkit-transition: all 2s ease 0s;
+  transition: all 2s ease 0s;
+  z-index: 10;
 }
 
 @media (max-width: 1270px) {
@@ -265,8 +293,8 @@ body {
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-  -webkit-transition: all 2s ease 0s;
-  transition: all 2s ease 0s;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
   position: absolute;
   top: 0;
   left: 0;
@@ -299,13 +327,14 @@ body {
   -webkit-perspective: 1000px;
   perspective: 1000px;
   display: none;
+  z-index: 10;
 }
 
 .spinner .circle,
 .spinner .line {
   width: 300px;
   height: 300px;
-  border: 5px solid #000;
+  border: 5.4px solid rgba(255, 255, 255, 0.405);
   border-radius: 50%;
 }
 
@@ -374,4 +403,14 @@ body {
 
 ._ball-none {
   background: none;
+}
+
+._ballText-none {
+  visibility: hidden;
+  opacity: 0;
+}
+
+._hi-none {
+  visibility: hidden;
+  opacity: 0;
 }
