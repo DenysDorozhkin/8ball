@@ -24,6 +24,12 @@ window.onload = function() {
     setTimeout(() => {
         ballText.classList.remove('_ballText-none');
     },1454)
+
+    // First Frame
+    frame();
+    
+    // First particle explosion
+    initParticles(config.particleNumber);
 }
 
 const mainButton = document.getElementById('button');
@@ -211,8 +217,3 @@ document.body.addEventListener("click", function (event) {
     initParticles(config.particleNumber, x, y);
 });
 
-// First Frame
-frame();
-
-// First particle explosion
-initParticles(config.particleNumber);
