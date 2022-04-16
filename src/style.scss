@@ -8,8 +8,6 @@
 //ПЕРЕМЕННЫЕ   
 $fontFamily: 'Montserrat', sans-serif;
 
-
-
 body{
     font-family: $fontFamily;
 }
@@ -121,8 +119,6 @@ body{
     }
 }
 
-canvas { position:absolute; top:0; left:0; z-index:0; width: 100%; height: 100%; opacity: 0.54; border-radius: 50%;}
-
 .ball{
     @include flexbox();
     justify-content: center;
@@ -178,12 +174,12 @@ canvas { position:absolute; top:0; left:0; z-index:0; width: 100%; height: 100%;
     .line{
         width: 300px;
         height: 300px;
-        border: 5.4px solid rgba(255, 255, 255, 0.405);
+        border: 5.4px solid rgba(0, 0, 0, 0.904);
         border-radius: 50%;
         @media(max-width:385px){
             width: 200px;
             height: 200px;
-            border: 4.4px solid rgba(255, 255, 255, 0.405);
+            border: 4.4px solid rgba(0, 0, 0, 0.904);
         }
     }
 
