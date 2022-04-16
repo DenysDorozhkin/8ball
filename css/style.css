@@ -300,6 +300,12 @@ canvas {
   left: 0;
   width: 100%;
   text-align: center;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 @media (max-width: 1270px) {
@@ -316,7 +322,8 @@ canvas {
 }
 
 ._none-more {
-  top: 1454px;
+  -webkit-transform: translateY(-754%);
+          transform: translateY(-754%);
 }
 
 ._active-more {

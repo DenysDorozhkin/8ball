@@ -152,6 +152,8 @@ canvas { position:absolute; top:0; left:0; z-index:0; width: 100%; height: 100%;
     left: 0;
     width: 100%;
     text-align: center;
+    transform: translateY(0%);
+    transition: transform 1s;
 }
 ._none-p{
     @include anim(2s,0s);
@@ -160,7 +162,7 @@ canvas { position:absolute; top:0; left:0; z-index:0; width: 100%; height: 100%;
 }
 ._none-more{
     //@include anim(2s,0s);
-    top: 1454px;
+    transform: translateY(-754%);
 }
 ._active-more{
     top: 0px;
