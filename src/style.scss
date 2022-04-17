@@ -157,6 +157,10 @@ body{
     text-align: center;
     transform: translateY(0%);
     transition: transform 1s;
+    @media(max-height:420px){
+       font-size: 14px;
+    }
+    
 }
 ._none-p{
     @include anim(2s,0s);

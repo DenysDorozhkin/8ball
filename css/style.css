@@ -316,6 +316,12 @@ body {
   }
 }
 
+@media (max-height: 420px) {
+  .more {
+    font-size: 14px;
+  }
+}
+
 ._none-p {
   -webkit-transition: all 2s ease 0s;
   transition: all 2s ease 0s;
