@@ -96,6 +96,9 @@ body{
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
             @include anim(1s,0s);
+            @media(max-height:420px){
+                display: none;
+            }
         }
         &_more{
             position: relative;
@@ -112,6 +115,10 @@ body{
             position: relative;
             @include anim(1s,0s);
             @media(max-width:385px){
+                width: 200px;
+                height: 200px;
+            }
+            @media(max-height:420px){
                 width: 200px;
                 height: 200px;
             }
@@ -177,6 +184,11 @@ body{
         border: 5.4px solid rgba(0, 0, 0, 0.904);
         border-radius: 50%;
         @media(max-width:385px){
+            width: 200px;
+            height: 200px;
+            border: 4.4px solid rgba(0, 0, 0, 0.904);
+        }
+        @media(max-height:420px){
             width: 200px;
             height: 200px;
             border: 4.4px solid rgba(0, 0, 0, 0.904);
