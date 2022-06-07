@@ -284,7 +284,19 @@ body {
 
 @media (max-width: 1270px) {
   .ball__text {
-    font-size: calc(20px + 20 * ((100vw - 320px) / 950));
+    font-size: calc(27px + 13 * ((100vw - 320px) / 950));
+  }
+}
+
+@media (max-height: 420px) {
+  .ball__text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 385px) {
+  .ball__text {
+    font-size: 20px;
   }
 }
 
@@ -336,6 +348,11 @@ body {
 
 ._active-more {
   top: 0px;
+}
+
+._hi-goaway {
+  -webkit-transform: translateY(-254%);
+          transform: translateY(-254%);
 }
 
 .spinner {
