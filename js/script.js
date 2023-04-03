@@ -31,11 +31,11 @@ mainButton.addEventListener('click', mainButtonClick);
 
 const moreText = document.querySelector('.more');
 const spinner = document.querySelector('.spinner');
-let tomaPiska = true;
+let animationForEnd = true;
 
 function mainButtonClick() {
-    if (tomaPiska) {
-        tomaPiska = false;
+    if (animationForEnd) {
+        animationForEnd = false;
         moreText.classList.add('_none-more');
         ballText.firstChild.classList.toggle('_none-p');
         ballText.style.display = 'none';
@@ -53,13 +53,13 @@ function mainButtonClick() {
                 hiText.classList.add('_hi-goaway');
                 moreText.classList.remove('_none-more');
                 moreText.style['margin-top'] = '-50%';
-                tomaPiska = true;
+                animationForEnd = true;
             }
         }, 4000)
     }
 }
 
-const answers = ['Так', 'Ні', 'Ну-ну-ну, не треба', 'Так, але ти піська', 'Спитай через 4 хвилини', 'Все буде добре!', 'Коли таке питаєш, я думаю - нащо мене створили?', `Це що "чумор"?`, 'Довірся всесвіту',];
+const answers = ['Так', 'Ні', 'Ну-ну-ну, не треба', 'Так, але у тебе лапки', 'Спитай через 4 хвилини', 'Все буде добре!', 'Коли таке питаєш, я думаю - нащо мене створили?', `Таааак`, 'Довірся всесвіту',];
 let answer = '';
 //console.log(answers.length)
 
